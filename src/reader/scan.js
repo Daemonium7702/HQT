@@ -39,7 +39,7 @@ export default function scan(socketUrl) {
     log.success('Question found, resolving... \n');
     const question = parse(data);
     const results = await resolvers.init(question);
-    storeQuestion(data);
+    message.channel.send(results)
     console.log(results);
   });
 }
